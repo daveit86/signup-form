@@ -5,14 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="validation.js" defer></script>
 </head>
 <body>
     <div id="container">
         <div class="horsection" id="left">
             <div id="welcome"><div id="welcome-message">Serious Forms</div></div>
         </div>
-        <form class="horsection" id="right" action="#" method="post">
+        <form class="horsection"  id="right" action="#" method="post" name="myForm" onsubmit="return validateForm()">
             <div class="section top">
                 <div class="container">
                     <p class="large-text">Make great sign-up form!<br>
@@ -25,34 +26,34 @@
                     <div class="form">
                         <div class="inputbox">
                             <label for="name">First Name</label>
-                            <input type="text" name="name" id="name">
+                            <input type="text" name="name" id="name" required>
                         </div>
                         <div class="inputbox">
                             <label for="surname">Last Name</label>
-                            <input type="text" name="surname" id="surname">
+                            <input type="text" name="surname" id="surname" required>
                         </div>
                         <div class="inputbox">
                             <label for="email">Email</label>
-                            <input type="email" name="email" id="email">
+                            <input type="email" name="email" id="email" required>
                         </div>
                         <div class="inputbox">
                             <label for="tel">Phone Number</label>
-                            <input type="tel" name="tel" id="tel">
+                            <input type="tel" name="tel" id="tel" required>
                         </div>
                         <div class="inputbox">
                             <label for="password">Password</label>
-                            <input type="password" name="password" id="password">
+                            <input type="password" name="password" id="password" required>
                         </div>
                         <div class="inputbox">
-                            <label for="password-confirm">Name</label>
-                            <input type="password" name="password-confirm" id="password-confirm">
+                            <label for="passwordc">Confirm Password</label>
+                            <input type="password" name="passwordc" id="passwordc" required>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="section bottom">
                 <div class="container">
-                    <button type="submit">Register</button>
+                    <button id="submitBtn" type="submit">Register</button>
                     <p>Already have an account? <a href="#">Log in</a></p>
                 </div>  
             </div>
